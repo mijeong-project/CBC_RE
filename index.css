@@ -1,9 +1,10 @@
 @charset "utf-8";
-html{
+
+html {
     scroll-behavior: smooth;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -20,14 +21,21 @@ ul {
 body {
     font-size: 15px;
     line-height: 1.5;
-    color: #fff;
-    background-color: #ae0303;
+    color: #000;
+}
+
+@font-face {
+    font-family: 'Ownglyph_ryuttung-Rg';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/Ownglyph_ryuttung-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* header */
-header{
+header {
     width: 100%;
 }
+
 .header_in {
     z-index: 99;
     position: absolute;
@@ -36,28 +44,33 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px ;
+    padding: 0 50px;
     box-sizing: border-box;
 }
-.logo1{
+
+.logo1 {
     display: none;
 }
 
-.header_in img{
+.header_in img {
     width: 150px;
 }
+
 .nav {
     display: flex;
     justify-content: end;
     gap: 30px;
 }
-.nav a{
+
+.nav a {
     font-size: 20px;
 }
-.nav a:hover{
+
+.nav a:hover {
     border-bottom: 4px solid #fff;
 }
-.scroll-fixed{
+
+.scroll-fixed {
     background-color: #ae0303;
     position: fixed;
     top: -20px;
@@ -67,38 +80,44 @@ header{
     box-sizing: border-box;
 }
 
-.scroll-fixed .nav a{
+.scroll-fixed .nav a {
     color: #fff;
     transition: all 0.5s;
 }
-.scroll-fixed .logo1{
+
+.scroll-fixed .logo1 {
     display: block;
     margin-top: 10px;
 }
-.scroll-fixed .logo2{
+
+.scroll-fixed .logo2 {
     display: none;
 }
+
 /* header */
 
 /* main */
-#main{
+#main {
     overflow: hidden;
     width: 100%;
     height: 800px;
     position: relative;
-    background: url(./img/bugi1.png) no-repeat 50% 80%/cover;
+    background: url(./img/main.png) no-repeat 50% 80%/cover;
 }
 
-#main h1{
-    font-size: 70px;
-    text-align: center;   
-    color: #fff; 
+#main h1 {
+    font-size: 90px;
+    text-align: center;
+    font-weight: 400;
+    color: #fff;
     margin-top: 650px;
+    font-family: 'Ownglyph_ryuttung-Rg';
 }
+
 /* main */
 
 /* 글자 흘러가는 애니메이션 */
-.text_ani{
+.text_ani1 {
     background-color: #fff;
     color: #ae0303;
     overflow: hidden;
@@ -106,12 +125,14 @@ header{
     font-weight: 900;
     text-transform: uppercase;
 }
-.text_ani ul{
+
+.text_ani1 ul {
     display: flex;
     white-space: nowrap;
-    
+
     animation: text_ani1 10s infinite linear;
 }
+
 @keyframes text_ani1 {
     0% {
         transform: translateX(0);
@@ -121,60 +142,209 @@ header{
         transform: translateX(-100%);
     }
 }
+
+.white_text {
+    color: #fff;
+    -webkit-text-stroke: 2px #ae0303;
+}
+
+.text_ani2 {
+    background-color: #fff;
+    color: #ae0303;
+    overflow: hidden;
+    font-size: 80px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.text_ani2 ul {
+    display: flex;
+    white-space: nowrap;
+
+    animation: text_ani2 10s infinite linear;
+}
+
+@keyframes text_ani2 {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
 /* 글자 흘러가는 애니메이션 */
 
 /* about */
-#about{
-    width: 100%;
-    margin: 30px auto 250px;
-    text-align: center;
-    color: #fff;
-}
-#about h1{
-    font-size: 40px;
-}
-#about p{
-    font-weight: 400;
-}
-#about span{
-    font-size: 20px;
-    font-weight: 600;
-}
-.about_img{
-    width: 100%;
+#about {
+    width: 1920px;
+    position: relative;
     margin: auto;
 }
-.about_img ul{
-    display: flex;
-    justify-content: space-between;
-    margin: 30px auto;
+
+.gallery {
+    width: 1920px;
+    margin: 50px auto;
+    padding: 0 0px 40px;
+    box-sizing: border-box;
+    position: relative;
 }
-.about_img ul li{
-    width: 30%;
-    height: 400px;
+
+.gallery_inner {
+    width: 100%;
+    overflow: hidden;
+}
+
+.gallery .swiper-slide {
+    width: 33.33%;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.gallery .swiper-slide-prev {
+    margin-left: -300px;
+    margin-right: 750px !important;
+}
+
+
+.gallery .swiper-slide img {
+    display: block;
+    width: 80%;
+    transition: 1s;
+    margin: auto;
+}
+
+.gallery .swiper-button-prev,
+.gallery .swiper-button-next {
+    width: 50px;
+    height: 50px;
+}
+
+.gallery .swiper-button-prev:after,
+.gallery .swiper-button-next:after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+.gallery .swiper-button-prev:after {
+    background: url(./img/prev.png);
+}
+
+.gallery .swiper-button-next:after {
+    background: url(./img/next.png);
+}
+
+.gallery .swiper-button-prev,
+.gallery .swiper-button-next {
+    color: #ae0303;
+}
+
+/*이동버튼 영역 호버 시 색상 바꾸기*/
+.gallery .swiper-button-prev:hover,
+.gallery .swiper-button-next:hover {
+    color: rgba(174, 3, 3, 0.315);
+}
+
+.about_text {
+    position: absolute;
+    left: 32%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    text-align: center;
+}
+
+.about_text h1 {
+    font-size: 80px;
+    margin-bottom: 15px;
+}
+
+.about_text h3 {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+.about_text h4 {
+    font-size: 35px;
+    font-weight: 400;
 }
 
 /* about */
 
-#menu{
-    width:1320px;
+/* menu */
+#menu {
+    width: 100%;
+    height: 3624px;
+    padding-top: 70px;
     margin: auto;
+    background-color: #ae0303;
+    position: relative;
+}
+
+#menu h1 {
+    width: 380px;
+    height: 142px;
+    text-align: center;
+    font-size: 80px;
+    background: url(./img/menu_back.png) no-repeat 50% 50%;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    margin-left: -190px;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu_in {
+    height: 3500px;
+    border-top: 30px solid #fff;
+    border-bottom: 30px solid #fff;
+}
+.menu_in ul{
+    width: 1320px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 250px 0;
+    position: relative;
+    align-items: center;
+}
+.classic-1,
+.classic-2,
+.classic-3{
+    position: absolute;
+    z-index: 98;
+}
+.classic-1{
+    top: 61%;
+    left: 90px;
+}
+
+.classic-2{
+    top: 30%;
+    left: 25%;
+}
+.classic-3{
+    top: 40%;
+    left: 50px;
+}
+.buger-text1 p{
+    background: url(./img/menu_in_back.png) no-repeat 50% 50%;
+    width: 605px;
+    height: 253px;
+    box-sizing: border-box;
+    padding: 50px;
+    font-size: 25px;
     text-align: center;
 }
-#menu h1{
-    font-size: 60px;
+.buger-text1 img{
+    position: absolute;
+    top: 280px;
+    left: 680px;
 }
-#menu ul{
-    display: flex;
-}
-#menu ul li p{
-    font-size: 40px;
-    margin-top: -60px;
-    font-weight: 800;
-}
-#menu ul li img{
-    transition: 0.5s;
-}
-#menu ul li img:hover{
-    transform: scale(1.1);
-}
+/* menu */
