@@ -31,6 +31,13 @@ body {
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'UhBeeSe_hyun';
+    src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSe_hyun.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* header */
 header {
     width: 100%;
@@ -178,13 +185,14 @@ header {
 
 /* about */
 #about {
-    width: 1920px;
+    width: 100%;
     position: relative;
     margin: auto;
+    overflow: hidden;
 }
 
 .gallery {
-    width: 1920px;
+    width: 100%;
     margin: 50px auto;
     padding: 0 0px 40px;
     box-sizing: border-box;
@@ -203,8 +211,8 @@ header {
 }
 
 .gallery .swiper-slide-prev {
-    margin-left: -300px;
-    margin-right: 750px !important;
+    margin-left: -10%;
+    margin-right: 40% !important;
 }
 
 
@@ -217,58 +225,30 @@ header {
 
 .gallery .swiper-button-prev,
 .gallery .swiper-button-next {
-    width: 50px;
-    height: 50px;
-}
-
-.gallery .swiper-button-prev:after,
-.gallery .swiper-button-next:after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 50px;
-}
-
-.gallery .swiper-button-prev:after {
-    background: url(./img/prev.png);
-}
-
-.gallery .swiper-button-next:after {
-    background: url(./img/next.png);
-}
-
-.gallery .swiper-button-prev,
-.gallery .swiper-button-next {
-    color: #ae0303;
-}
-
-/*이동버튼 영역 호버 시 색상 바꾸기*/
-.gallery .swiper-button-prev:hover,
-.gallery .swiper-button-next:hover {
-    color: rgba(174, 3, 3, 0.315);
+    display: none;
 }
 
 .about_text {
     position: absolute;
-    left: 32%;
+    left: 40%;
     top: 50%;
     transform: translate(-50%, -50%);
-    z-index: 99;
+    z-index: 98;
     text-align: center;
 }
 
 .about_text h1 {
-    font-size: 80px;
+    font-size: 60px;
     margin-bottom: 15px;
 }
 
 .about_text h3 {
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 25px;
 }
 
 .about_text h4 {
-    font-size: 35px;
+    font-size: 25px;
     font-weight: 400;
 }
 
@@ -277,11 +257,18 @@ header {
 /* menu */
 #menu {
     width: 100%;
-    height: 3624px;
-    padding-top: 70px;
+    padding: 70px 0;
     margin: auto;
-    background-color: #ae0303;
+    background: #ae0303;
+    background-size: 100%;
     position: relative;
+}
+
+.menu-border {
+    border-top: 30px solid #fff;
+    border-bottom: 30px solid #fff;
+    padding: 200px 0 50px;
+    background: url(./img/menu_left.png) repeat-y left top, url(./img/manu-right.png) repeat-y right top;
 }
 
 #menu h1 {
@@ -294,57 +281,253 @@ header {
     top: 15px;
     left: 50%;
     margin-left: -190px;
-    z-index: 99;
+    z-index: 98;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .menu_in {
-    height: 3500px;
-    border-top: 30px solid #fff;
-    border-bottom: 30px solid #fff;
+    width: 100%;
+    text-align: center;
 }
-.menu_in ul{
+
+.menu_in .buger-manu {
     width: 1320px;
     margin: auto;
+    margin-bottom: 120px;
     display: flex;
     justify-content: space-around;
-    padding: 250px 0;
     position: relative;
     align-items: center;
 }
+
 .classic-1,
 .classic-2,
-.classic-3{
+.classic-3,
+.white-1,
+.white-2,
+.white-3,
+.blt-1,
+.blt-2,
+.blt-3,
+.hulk-1,
+.hulk-2,
+.hulk-3,
+.max-1,
+.max-2,
+.side-1,
+.side-2 {
     position: absolute;
     z-index: 98;
 }
-.classic-1{
-    top: 61%;
+
+.classic-1 {
+    top: 75%;
     left: 90px;
 }
 
-.classic-2{
-    top: 30%;
+.classic-2 {
+    top: 15%;
     left: 25%;
 }
-.classic-3{
-    top: 40%;
+
+.classic-3 {
+    top: 30%;
     left: 50px;
 }
-.buger-text1 p{
+
+.white-1 {
+    top: 10%;
+    right: 10px;
+}
+
+.white-2 {
+    top: 70%;
+    right: 50px;
+}
+
+.white-3 {
+    top: 1%;
+    right: 28%;
+}
+
+.blt-1 {
+    top: 5%;
+    left: 2%;
+}
+
+.blt-2 {
+    top: 70%;
+    left: 10%;
+}
+
+.blt-3 {
+    top: 15%;
+    left: 30%;
+}
+
+.hulk-1 {
+    top: 70%;
+    right: 25%;
+}
+
+.hulk-2 {
+    top: 25%;
+    right: 1%;
+}
+
+.hulk-3 {
+    top: 1%;
+    right: 17%;
+}
+
+.max-1 {
+    top: 55%;
+    left: 5%;
+}
+
+.max-2 {
+    top: 5%;
+    left: 15%;
+}
+
+.side-1 {
+    top: 10%;
+    right: 30%;
+}
+
+.side-2 {
+    top: -15%;
+    right: 2%;
+}
+
+.buger-text p,
+.buger-text2 p {
     background: url(./img/menu_in_back.png) no-repeat 50% 50%;
     width: 605px;
     height: 253px;
     box-sizing: border-box;
     padding: 50px;
     font-size: 25px;
-    text-align: center;
+    font-family: 'UhBeeSe_hyun';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.buger-text1 img{
+
+
+.buger-text img {
     position: absolute;
-    top: 280px;
+    top: 30px;
     left: 680px;
 }
+
+.buger-text2 img {
+    position: absolute;
+    top: 30px;
+    left: 80px;
+}
+
+.buger-text2 .hulk-name {
+    position: absolute;
+    top: 10px;
+    left: 120px;
+}
+
+.buger-text2 .side_name {
+    position: absolute;
+    top: -30px;
+}
+
+.buger-margin {
+    padding-top: 60px;
+}
+
+.buger-scale,
+.buger-left,
+.buger-right {
+    transition: 0.5s;
+}
+
+.buger:hover .buger-scale {
+    transform: scale(1.1);
+}
+
+.buger:hover .buger-left {
+    transform: rotate(-10deg);
+}
+
+.buger:hover .buger-right {
+    transform: rotate(10deg);
+}
+
 /* menu */
+
+/* store */
+#store{
+    width: 100%;
+    padding: 150px 0;
+}
+.store-title{
+     background-color: #ae0303;
+    height: 200px;
+    width: 70%; 
+}
+.title-box{
+  width: 90%;
+  margin: auto;  
+  font-size: 22px;  
+  font-weight: 500;
+
+}
+.title-box ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 40px;
+    box-sizing: border-box;
+    padding-top: 30px;
+}
+.title-box ul li:nth-of-type(1){
+    font-size: 80px;
+    color: #fff;
+    font-weight: 800;
+}
+.title-box b{
+    color: #fff;
+}
+
+.store-in ul{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 1320px;
+    margin: auto;
+    position: relative;
+    padding: 200px 0;
+}
+.store-in .pin{
+    position: absolute;
+    top: 58%;
+    left: 14%;
+}
+.store-in .pin2{
+    position: absolute;
+    top: 58%;
+    left: 47%;
+}
+.store-in .pin3{
+    position: absolute;
+    top: 58%;
+    left: 81%;
+}
+.store-in ul li h4{
+    margin-top: 50px;
+    font-size: 40px;
+}
+.store-in ul li p{
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+/* store */
