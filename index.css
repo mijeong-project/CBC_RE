@@ -633,7 +633,9 @@ header {
     font-size: 25px;
     font-weight: 400;
 }
-
+.franchise-in .send th{
+    margin-top: 25px;
+}
 .franchise-in .send td input {
     width: 900px;
     margin: auto;
@@ -847,7 +849,7 @@ header {
     .store-in .pin,
     .store-in .pin2,
     .store-in .pin3 {
-        transition: 0;
+        transition: none;
         top: 65%;
     }
 
@@ -1385,9 +1387,13 @@ header {
 @media(max-width:426px){
     #main h1{
         margin-top: 400px;
+       
     }
     #menu h1{
         top: -5px;
+        width: 100%;
+        left: 0;
+        margin-left: 0;
     }
     .about_text h3{
         font-size: 16px;
