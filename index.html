@@ -7,6 +7,9 @@
     <title>치킨버거클럽</title>
     <!-- link swiper css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- aos css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
 
     <link rel="stylesheet" href="./index.css">
@@ -176,17 +179,15 @@
                         <img src="./img/about3.png" alt="치킨패티">
                     </div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
             </div>
         </div>
 
         <div class="about_text">
             <h1>ABOUT</h1>
             <h3>버거 그 이상의 버거</h3>
-            <h4>치킨버거클럽은 본질에 진심을 다합니다. <br>
-                미국 테네시주 내쉬빌 스타일의 <br>
-                내쉬빌핫치킨버거 전문의 브랜드 입니다.</h4>
+            <h4>치킨버거클럽은 본질에 진심을 다합니다. <br class="onlyPC">
+                미국 테네시주 내쉬빌 스타일의 <br class="onlyPC">
+                내쉬빌핫치킨버거 전문의 브랜드 입니다.</h4 class="onlyPC">
         </div>
     </div>
     <!-- about -->
@@ -213,7 +214,7 @@
                     </li>
                 </ul>
 
-                <ul class="buger-manu">
+                <ul class="buger-manu menu-up">
                     <li class="buger-text2">
                         <img src="./img/white-name.png" alt="classic">
                         <p>달콤한 허니크림치즈에 맵싹한 내쉬빌<br> 핫치킨의 조합! 치버클 단골 1등 메뉴!</p>
@@ -234,12 +235,12 @@
                         <img src="./img/BLT-right.png" alt="내슈빌" class="blt-3 buger-right">
                     </li>
                     <li class="buger-text">
-                        <img src="./img/BLT-name.png" alt="blt">
+                        <img src="./img/BLT-name.png" alt="blt" class="blt-name">
                         <p>내쉬빌핫피킨과 베이컨, 양상추, 토마토에<br>시저소스까지! 매니아층이 탄탄한 메뉴!</p>
                     </li>
                 </ul>
 
-                <ul class="buger-manu">
+                <ul class="buger-manu menu-up">
                     <li class="buger-text2">
                         <img src="./img/hulk-name.png" alt="hulk" class="hulk-name">
                         <p>부드러운 바질소스과 매콤한 네슈빌 핫치킨의<br>조합은 말해뭐해 최고의 조합!</p>
@@ -259,13 +260,13 @@
                         <img src="./img/max-top.png" alt="소스" class="max-2 buger-right">
                     </li>
                     <li class="buger-text">
-                        <img src="./img/max-name.png" alt="max">
+                        <img src="./img/max-name.png" alt="max" class="max-name">
                         <p>매번 정성껏 만드는 맥앤 치즈와<br>매콤한 네슈빌 치킨의 조합은 <br> 단짠의 최고궁합!</p>
                     </li>
                 </ul>
 
-                <ul class="buger-manu buger-margin">
-                    <li class="buger-text2">
+                <ul class="buger-manu buger-margin menu-up">
+                    <li class="buger-text2 side-text">
                         <img src="./img/side-name.png" alt="side" class="side_name">
                         <p>네슈빌 치킨의 독보적인 맛을 느껴보고 싶다면<br> 치킨 단품을 추천드립니다!</p>
                     </li>
@@ -282,7 +283,7 @@
 
     <!-- store -->
     <div id="store">
-        <div class="store-title">
+        <div class="store-title" data-aos="fade-right">
             <div class="title-box">
                 <ul>
                     <li>
@@ -298,32 +299,38 @@
 
         <div class="store-in">
             <ul>
-                <li>
+                <li data-aos="fade-up" data-aos-delay="0">
                     <img src="./img/store1.png" alt="전포점">
                     <img src="./img/store-pin.png" alt="핀" class="pin">
-                    <h4>부산 전포점</h4>
-                    <p>부산광역시 부산진구 <br>
-                        서전로 58번길 121 </p>
-                    <p>051-947-4744</p>
+                    <div class="store-text">
+                        <h4>부산 전포점</h4>
+                        <p>부산광역시 부산진구 <br>
+                            서전로 58번길 121 </p>
+                        <p>051-947-4744</p>
+                    </div>
                 </li>
 
-                <li>
+                <li data-aos="fade-up" data-aos-delay="300">
                     <img src="./img/store2.png" alt="광안점">
                     <img src="./img/store-pin.png" alt="핀" class="pin2">
-                    <h4>부산 광안점</h4>
-                    <p>부산광역시 수영구 <br>
-                        광남로 218
-                    </p>
-                    <p>051-761-4744</p>
+                    <div class="store-text">
+                        <h4>부산 광안점</h4>
+                        <p>부산광역시 수영구 <br>
+                            광남로 218
+                        </p>
+                        <p>051-761-4744</p>
+                    </div>
                 </li>
 
-                <li>
+                <li data-aos="fade-up" data-aos-delay="600">
                     <img src="./img/store3.png" alt="대구 현대백화점">
                     <img src="./img/store-pin.png" alt="핀" class="pin3">
-                    <h4>대구 현대백화점</h4>
-                    <p>대구광역시 중구 <br>
-                        달구벌대로 2077</p>
-                    <p>053-245-2233</p>
+                    <div class="store-text">
+                        <h4>대구 현대백화점</h4>
+                        <p>대구광역시 중구 <br>
+                            달구벌대로 2077</p>
+                        <p>053-245-2233</p>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -341,21 +348,71 @@
                 보다 좋은 품질의 식자재를 경쟁력있는 단가로 가맹점에 공급하려 하며, <br>
                 본사의 탄탄한 물류 시스템을 통해 가맹점의 성공을 지원하고 있습니다. </p>
 
-                <a href="#">051-761-4744</a>
-                <a href="#">cbcclub71@gmail.com</a>
+            <a href="#">051-761-4744</a>
+            <a href="#">cbcclub71@gmail.com</a>
 
-                <div class="send">
-                    <h4>가맹문의</h4>
-                </div>
+            <div class="send">
+                <h4>가맹문의</h4>
+                <table>
+                    <tr>
+                        <th>성명</th>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <th>연락처</th>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <th>이메일</th>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <th>창업희망지역</th>
+                        <td><input type="text" placeholder="서울/경기, 부산/경남, 대구/경북, 대전/충북 등 지역을 입력해 주세요."></td>
+                    </tr>
+                    <tr>
+                        <th>상세내용</th>
+                        <td><input type="text"></td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
     <!-- 프랜차이즈 -->
+
+    <!-- footer -->
+    <div id="footer">
+        <div class="footer_in">
+            <img src="./img/footer-logo2.png" alt="푸터로고">
+            <p>(주) 치킨버거클럽 사업자번호 637-48-00712 부산광역시 수영구 광남로 218, 1층 (민락동)</p>
+            <p>ⓒ2024.CHICKEN BURGER CLUB ALL rights reserved</p>
+
+            <ul>
+                <li><a href="#">개인정보 보호정책</a></li>
+                <li><a href="#">사이트 이용 약관</a></li>
+                <li><a href="#">쿠키정책</a></li>
+                <li><a href="#">사이트맵</a></li>
+            </ul>
+
+            <div class="sns">
+                <ul>
+                    <li><a href="#"><img src="./img/footer1.png" alt="인스타 아이콘"></a></li>
+                    <li><a href="#"><img src="./img/footer2.png" alt="유튜브 아이콘"></a></li>
+                    <li><a href="#"><img src="./img/footer3.png" alt="유령 아이콘"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+
 
 
     <!-- js라이브러리  -->
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <!-- swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
     <script src="./index.js"></script>
