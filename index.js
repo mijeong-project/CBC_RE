@@ -26,10 +26,10 @@ var swiper = new Swiper('.gallery .gallery_inner ', {
         disableOnInteraction: false,
     },
     loop: true,//슬라이드 무한반복
-    navigation: {//화살표 버튼
-        nextEl: '.gallery .swiper-button-next',
-        prevEl: '.gallery .swiper-button-prev',
-    },
     centeredSlides: true,
-    
+});
+
+// aos
+AOS.init({
+    duration: 1300 //aos 나타나는 속도
 });
